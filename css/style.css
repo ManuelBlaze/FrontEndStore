@@ -38,7 +38,6 @@ h2 {
     text-transform: uppercase;
 }
 .listaproductos {
-    margin-top: 40px;
     padding: 0;
     list-style: none;
 }
@@ -48,9 +47,20 @@ h2 {
     padding: 20px;
     text-align: center;
 }
+/**2(0) + 1 FIX FLOATS**/
+.listaproductos li:nth-child(2n+1) {
+clear: both;
+}
 @media (min-width: 768px) {
     .listaproductos li {
         width: 33.3%;
+    }
+    /*FIX FLOATS*/
+    .listaproductos li:nth-child(2n+1) {
+        clear: unset;
+    }
+    .listaproductos li:nth-child(3n+1) {
+        clear: both;
     }
 }
 .listaproductos li img {
@@ -59,4 +69,27 @@ h2 {
 }
 .listaproductos li img:hover {
     border: 10px solid rgba(128, 1, 195, 1);
+}
+.listaproductos li p {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 10px 0 0 0;
+}
+span.precio {
+    color: #ffce00;
+    font-size: 40px;
+}
+.boton {
+    text-decoration: none;
+    background-color: #ffce00;
+    padding: 10px 40px;
+    margin-top: 10px;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #8001c3;
+    transition: background-color .3s ease-in-out;
+}
+.boton:hover {
+    background-color: #ebbc00;
 }
